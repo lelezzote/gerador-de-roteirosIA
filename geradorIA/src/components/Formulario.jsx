@@ -52,25 +52,16 @@ export default function Formulario() {
         <option value="avaliacao">Avaliação</option>
       </select>
 
-      {/* Nova opção: pedir exercícios */}
+
   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-    <input 
-      type="checkbox" 
-      name="exercicio" 
-      onChange={handleChange} 
-      checked={formData.exercicio}
-    />
+    <input  type="checkbox" name="exercicio" onChange={handleChange} checked={formData.exercicio} />
     <label>Deseja incluir exercícios?</label>
   </div>
 
   {formData.exercicio && (
     <>
       <label>Detalhes dos exercícios:</label>
-      <textarea 
-        name="detalhesExercicio" 
-        onChange={handleChange} 
-        placeholder="Ex: questões de múltipla escolha, problemas de lógica, etc."
-      />
+      <textarea name="detalhesExercicio" onChange={handleChange} placeholder="Ex: questões de múltipla escolha, problemas de lógica, etc."/>
     </>
   )}
 
